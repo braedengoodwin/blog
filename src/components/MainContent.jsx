@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { posts } from "../constants/posts";
 
 const MainContent = () => {
@@ -10,11 +11,14 @@ const MainContent = () => {
               <h2 className="text-2xl font-bold text-[#324923]">
                 {item.title}
               </h2>
-              <div className="text-sm text-[#99A491]">{item.date}</div>
+              <h1 className="text-sm text-[#99A491]">{item.date}</h1>
               <p className=" text-[#324923] mt-3">{item.lessons}</p>
-              <button className="mb-10 mt-2 underline underline-offset-2 hover:text-[#99A491]">
+              <Link
+                to={`/${item.path}`}
+                className="block mb-10 mt-2 underline underline-offset-2 text-[#324923] hover:text-[#99A491]"
+              >
                 Read More
-              </button>
+              </Link>
             </li>
           ))}
         </ul>

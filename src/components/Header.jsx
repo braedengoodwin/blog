@@ -16,6 +16,7 @@ const Header = () => {
           <NavHeaders
             title="Main"
             className="mb-2 text-[#324923] text-2xl hover:text-[#99A491]"
+            to="/"
           />
           <NavHeaders
             title="Thoughts"
