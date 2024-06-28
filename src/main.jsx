@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import PostOne from "./blogPosts/post1.jsx";
+import PostTwo from "./blogPosts/post2.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: "/my-first-post",
     element: <PostOne />,
+    errorElement: <div>404 not found</div>,
+  },
+  {
+    path: "/my-second-post",
+    element: <PostTwo />,
     errorElement: <div>404 not found</div>,
   },
 ]);
