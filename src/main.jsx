@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import "./index.css";
 import PostOne from "./blogPosts/post1.jsx";
 import PostTwo from "./blogPosts/post2.jsx";
+import PostThree from "./blogPosts/post3.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "/my-second-post",
     element: <PostTwo />,
+    errorElement: <div>404 not found</div>,
+  },
+  {
+    path: "/my-third-post",
+    element: <PostThree />,
     errorElement: <div>404 not found</div>,
   },
 ]);
