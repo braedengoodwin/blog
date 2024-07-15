@@ -39,4 +39,24 @@ export const posts = [
       },
     ],
   },
+  {
+    id: "thoughts",
+    path: "my-third-post",
+    title: "Break Over",
+    author: "Braeden Goodwin",
+    date: "07/15/2024",
+    summary: [
+      {
+        title: "",
+        content: "",
+      },
+    ],
+    paragraphs: [
+      {
+        title: "Took a short break ",
+        content:
+          "I took a break the past 2 weeks for a couple of reasons. 1: I was feeling a little burnt out. Between work, trying to learn react, gym, and life I feel like I needed a slight break. 2: I was busy and felt like I didn't have time to fully commit to the tasks I set for myself. With that being said I'm ready to get back to it, I'm ready to buckle down and get back into a routine but that may be difficult because during the summer months it seems like I'm going non-stop.",
+      },
+    ],
+  },
 ];
