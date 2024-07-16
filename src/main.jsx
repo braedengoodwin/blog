@@ -7,6 +7,8 @@ import "./index.css";
 import PostOne from "./blogPosts/post1.jsx";
 import PostTwo from "./blogPosts/post2.jsx";
 import PostThree from "./blogPosts/post3.jsx";
+import PostFour from "./blogPosts/post4.jsx";
+import PostFive from "./blogPosts/post5.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
   {
     path: "/my-third-post",
     element: <PostThree />,
+    errorElement: <div>404 not found</div>,
+  },
+  {
+    path: "/my-fourth-post",
+    element: <PostFour />,
+    errorElement: <div>404 not found</div>,
+  },
+  {
+    path: "/my-fifth-post",
+    element: <PostFive />,
     errorElement: <div>404 not found</div>,
   },
 ]);

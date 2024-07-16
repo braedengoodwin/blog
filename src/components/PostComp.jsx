@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const PostComp = ({ title, author, date, summary, paragraph }) => {
   return (
@@ -12,7 +13,15 @@ const PostComp = ({ title, author, date, summary, paragraph }) => {
           >
             <BiArrowBack className="inline mb-1" /> BACK
           </Link>
-          <div className="w-4/5">
+
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+            }}
+            className="w-4/5"
+          >
             <h3 className="font-bold text-4xl text-[#324923]">{title}</h3>
             <h1 className="text-sm text-[#99A491] mt-1">
               By {author} on {date}
@@ -37,7 +46,7 @@ const PostComp = ({ title, author, date, summary, paragraph }) => {
                 <p className="mt-4 text-[#324923]">{paragraph.content}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
